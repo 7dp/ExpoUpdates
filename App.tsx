@@ -8,6 +8,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -24,6 +25,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {Illustrations} from './src/assets/illustrations';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -72,6 +74,11 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <Image
+          resizeMode="contain"
+          source={Illustrations.img_app_logo}
+          style={{height: 100, width: 100}}
+        />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
